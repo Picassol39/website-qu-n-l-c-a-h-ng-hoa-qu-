@@ -1,0 +1,21 @@
+- Database
+create database website;
+- Table Category
+create table category (
+	id int primary key auto_increment,
+	name varchar(50) not null,
+	created_at datetime,
+	updated_at datetime
+)
+- Table Product
+create table product (
+	id int primary key auto_increment,
+	title varchar(200) not null,
+	price float,
+    amount float,
+	thumbnail varchar(500),
+	content longtext,
+	id_category int references category (id),
+	created_at datetime,
+	updated_at datetime
+)
