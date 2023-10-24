@@ -34,7 +34,7 @@ if (!empty($_POST)) {
 		$created_at = $updated_at = date('Y-m-d H:s:i');
 		//Luu vao database
 		if ($id == '') {
-			$sql = 'insert into product(title, thumbnail, price, content, id_category, created_at, updated_at) 
+			$sql = 'insert into product(title, thumbnail, price, amount, content, id_category, created_at, updated_at) 
             values ("'.$title.'", "'.$price.'", "'.$thumbnail.'", "'.$content.'", "'.$id_category.'", "'.$created_at.'", "'.$updated_at.'","'.$amount.'")';
 		} else {
 			$sql = 'update product set title = "'.$title.'", updated_at = "'.$updated_at.'", thumbnail ="'.$thumbnail.'", price = "'.$price.'", content = "'.$content.'", id_category = "'.$id_category.'", amount ="'.$amount.'" where id='.$id;		
